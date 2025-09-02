@@ -37,7 +37,7 @@ export function PortfolioHeader({ onNavigateToPayment }: PortfolioHeaderProps = 
               onClick={() => scrollToSection('home')}
               className="text-xl font-bold text-white hover:text-blue-400 transition-colors"
             >
-              Portfolio
+              RiT Web Dev
             </button>
           </div>
 
@@ -71,8 +71,8 @@ export function PortfolioHeader({ onNavigateToPayment }: PortfolioHeaderProps = 
               onClick={() => {
                 // This will trigger resume download
                 const link = document.createElement('a');
-                link.href = '/resume.pdf'; // Replace with actual resume path
-                link.download = 'Your_Name_Resume.pdf';
+                link.href = 'public/resume.pdf'; // Replace with actual resume path
+                link.download = 'Rith.resume.pdf';
                 link.click();
               }}
               className="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"
@@ -127,8 +127,8 @@ export function PortfolioHeader({ onNavigateToPayment }: PortfolioHeaderProps = 
               <button 
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/resume.pdf';
-                  link.download = 'Your_Name_Resume.pdf';
+                  link.href = 'public/resume.pdf';
+                  link.download = 'Rith.resume.pdf';
                   link.click();
                   setIsMobileMenuOpen(false);
                 }}

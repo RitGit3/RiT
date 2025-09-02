@@ -19,14 +19,14 @@ export function PortfolioFooter() {
           
           {/* Brand & Description */}
           <div>
-            <h3 className="text-heading-3 text-white mb-4">Your Name</h3>
+            <h3 className="text-heading-3 text-white mb-4">Rith</h3>
             <p className="text-body-small text-gray-400 mb-4">
               Full-Stack Developer & UI/UX Designer passionate about creating 
               innovative digital solutions that make a difference.
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/RitGit3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition-colors"
@@ -42,7 +42,7 @@ export function PortfolioFooter() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:theariththeman@gmail.com"
                 className="text-gray-400 hover:text-blue-400 transition-colors"
               >
                 <Mail size={20} />
@@ -97,16 +97,16 @@ export function PortfolioFooter() {
                 href="mailto:your.email@example.com"
                 className="block text-gray-400 hover:text-blue-400 transition-colors"
               >
-                your.email@example.com
+                theariththeman@gmail.com
               </a>
               <a 
                 href="tel:+15551234567"
                 className="block text-gray-400 hover:text-blue-400 transition-colors"
               >
-                +1 (555) 123-4567
+                +855 (011) 59-2229
               </a>
               <span className="block text-gray-400">
-                Your City, Country
+                Phnom Penh, Cambodia
               </span>
             </div>
             
@@ -114,8 +114,8 @@ export function PortfolioFooter() {
             <button 
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/resume.pdf';
-                link.download = 'Your_Name_Resume.pdf';
+                link.href = 'public/resume.pdf';
+                link.download = 'Rith.resume.pdf';
                 link.click();
               }}
               className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"
@@ -129,7 +129,7 @@ export function PortfolioFooter() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-body-small text-gray-400 mb-4 md:mb-0">
-              © {currentYear} Your Name. All rights reserved.
+              © {currentYear} RiT. All rights reserved.
             </p>
             <p className="text-body-small text-gray-400 flex items-center">
               Made with <Heart size={16} className="text-red-400 mx-1" /> and lots of coffee

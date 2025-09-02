@@ -38,19 +38,19 @@ export function PortfolioContact() {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com"
+      value: "theariththeman@gmail.com",
+      href: "mailto:theariththeman@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+855 (011) 59-2229",
+      href: "tel:+855011592229"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Your City, Country",
+      value: "Phnom Penh, Cambodia",
       href: null
     }
   ];

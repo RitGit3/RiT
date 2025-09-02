@@ -64,7 +64,7 @@ export function PortfolioHero({ onNavigateToPayment }: PortfolioHeroProps = {}) 
           
           {/* Main Headline */}
           <h1 className="text-display text-white mb-6">
-            Hi, I'm <span className="text-blue-400">Your Name</span>
+            Hi, I'm <span className="text-blue-400">Rith</span>
           </h1>
           
           {/* Dynamic Role */}
@@ -117,8 +117,8 @@ export function PortfolioHero({ onNavigateToPayment }: PortfolioHeroProps = {}) 
             <button 
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/resume.pdf';
-                link.download = 'Your_Name_Resume.pdf';
+                link.href = 'public/resume.pdf';
+                link.download = 'Rith.resume.pdf';
                 link.click();
               }}
               className="border-2 border-gray-600 hover:border-blue-400 text-gray-300 hover:text-white px-8 py-4 rounded-lg transition-all duration-200 transform hover:scale-105 active:scale-95 font-medium flex items-center justify-center backdrop-blur-sm"
@@ -131,7 +131,7 @@ export function PortfolioHero({ onNavigateToPayment }: PortfolioHeroProps = {}) 
           {/* Social Links */}
           <div className="flex justify-center space-x-6">
             <a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/RiTGit3" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-400 transition-colors p-2"
@@ -147,7 +147,7 @@ export function PortfolioHero({ onNavigateToPayment }: PortfolioHeroProps = {}) 
               <Linkedin size={24} />
             </a>
             <a 
-              href="mailto:your.email@example.com"
+              href="mailto:theariththeman@gmail.com"
               className="text-gray-400 hover:text-blue-400 transition-colors p-2"
             >
               <Mail size={24} />
