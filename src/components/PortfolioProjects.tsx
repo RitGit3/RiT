@@ -131,7 +131,7 @@ export function PortfolioProjects() {
         {/* View All Projects CTA */}
         <div className="text-center">
           <a
-            href="https://github.com/RitGit3"
+            href="https://github.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700 hover:border-blue-500/50 text-white px-6 py-3 rounded-lg transition-all duration-200 backdrop-blur-sm"

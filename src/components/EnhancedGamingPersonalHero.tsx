@@ -72,7 +72,7 @@ export function EnhancedGamingPersonalHero() {
               <h1 className="text-3xl sm:text-5xl lg:text-7xl mb-6 text-white leading-tight">
                 <span className="block mb-2">HELLO, I'M</span>
                 <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
-                  Rith
+                  YOUR NAME
                 </span>
               </h1>
             </AnimatedText>

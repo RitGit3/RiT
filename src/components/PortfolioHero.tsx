@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 
-export function PortfolioHero() {
+interface PortfolioHeroProps {
+  onNavigateToPayment?: () => void;
+}
+
+export function PortfolioHero({ onNavigateToPayment }: PortfolioHeroProps = {}) {
   const [typedText, setTypedText] = useState("");
   const [currentRole, setCurrentRole] = useState(0);
   
@@ -55,12 +59,12 @@ export function PortfolioHero() {
           {/* Status Badge */}
           <div className="inline-flex items-center mb-8">
             <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-            <span className="text-caption text-green-400">Monday, September 1, 2025</span>
+            <span className="text-caption text-green-400">Available for New Opportunities</span>
           </div>
           
           {/* Main Headline */}
           <h1 className="text-display text-white mb-6">
-            Hi, I'm <span className="text-blue-400">Rith</span>
+            Hi, I'm <span className="text-blue-400">Your Name</span>
           </h1>
           
           {/* Dynamic Role */}
@@ -103,6 +107,14 @@ export function PortfolioHero() {
             </button>
             
             <button 
+              onClick={onNavigateToPayment}
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg transition-all duration-200 transform hover:scale-105 active:scale-95 font-medium flex items-center justify-center"
+            >
+              View Services & Pricing
+              <ArrowRight size={20} className="ml-2" />
+            </button>
+            
+            <button 
               onClick={() => {
                 const link = document.createElement('a');
                 link.href = '/resume.pdf';
@@ -119,7 +131,7 @@ export function PortfolioHero() {
           {/* Social Links */}
           <div className="flex justify-center space-x-6">
             <a 
-              href="https://github.com/RitGit3" 
+              href="https://github.com/yourusername" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-400 transition-colors p-2"
@@ -135,10 +147,8 @@ export function PortfolioHero() {
               <Linkedin size={24} />
             </a>
             <a 
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=theariththeman@gmail.com"
+              href="mailto:your.email@example.com"
               className="text-gray-400 hover:text-blue-400 transition-colors p-2"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <Mail size={24} />
             </a>

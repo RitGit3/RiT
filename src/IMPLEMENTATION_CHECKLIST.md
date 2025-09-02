@@ -8,20 +8,20 @@ Update in `/constants/links.ts`:
 ```typescript
 export const SOCIAL_LINKS = {
   github: {
-    url: "https://github.com/RitGit3",
-    handle: "RitGit3"
+    url: "https://github.com/YOUR_ACTUAL_USERNAME",
+    handle: "@YOUR_ACTUAL_USERNAME"
   },
   linkedin: {
     url: "https://linkedin.com/in/YOUR_ACTUAL_LINKEDIN",
     handle: "/in/YOUR_ACTUAL_LINKEDIN"
   },
   youtube: {
-    url: "https://www.youtube.com/@Space00123",
-    handle: "@Space00123"
+    url: "https://youtube.com/@YOUR_CHANNEL",
+    handle: "@YOUR_CHANNEL"
   },
   instagram: {
-    url: "https://www.instagram.com/rith_rity/",
-    handle: "@rith_rity"
+    url: "https://instagram.com/YOUR_INSTAGRAM",
+    handle: "@YOUR_INSTAGRAM"
   },
   discord: {
     url: "https://discord.gg/YOUR_DISCORD",

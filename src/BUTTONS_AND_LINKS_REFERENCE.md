@@ -70,7 +70,7 @@
 ### 📝 To Update Text Content:
 ```typescript
 // PortfolioHero.tsx - Line 63
-"Hi, I'm Rith"  // ← Change this
+"Hi, I'm Your Name"  // ← Change this
 
 // PortfolioHero.tsx - Lines 8-13
 const roles = [

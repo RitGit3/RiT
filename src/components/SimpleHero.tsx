@@ -4,7 +4,7 @@ export function SimpleHero() {
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-6xl mb-6 text-black">
-            Rith
+            Your Name
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Description about yourself goes here

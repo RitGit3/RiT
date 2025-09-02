@@ -38,20 +38,20 @@ export function PortfolioContact() {
     {
       icon: Mail,
       label: "Email",
-      value: "theariththeman@gmail.com",
-      href: "mailto:theariththeman@gmail.com"
+      value: "your.email@example.com",
+      href: "mailto:your.email@example.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+855 (011) 59-2229",
-      href: "tel:+855011592229"
+      value: "+1 (555) 123-4567",
+      href: "tel:+15551234567"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Phnom Penh, Cambodia",
-      href: "https://www.google.com/maps/place/11%C2%B030'55.2%22N+104%C2%B050'22.3%22E/@11.5153385,104.8369529,17z/data=!3m1!4b1!4m4!3m3!8m2!3d11.5153333!4d104.8395278?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
+      value: "Your City, Country",
+      href: null
     }
   ];
 
@@ -106,7 +106,7 @@ export function PortfolioContact() {
               <h4 className="text-heading-3 text-white mb-4">Connect With Me</h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com/RitGit3"
+                  href="https://github.com/yourusername"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gray-800/30 hover:bg-gray-700/50 border border-gray-700/50 hover:border-blue-500/30 rounded-lg p-3 transition-all duration-300"

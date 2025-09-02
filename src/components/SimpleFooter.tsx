@@ -33,7 +33,7 @@ export function SimpleFooter() {
         
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400">
-            © 2025 Rith. All rights reserved.
+            © 2025 Your Name. All rights reserved.
           </p>
         </div>
       </div>

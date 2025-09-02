@@ -19,7 +19,7 @@ export function PortfolioFooter() {
           
           {/* Brand & Description */}
           <div>
-            <h3 className="text-heading-3 text-white mb-4">Rith</h3>
+            <h3 className="text-heading-3 text-white mb-4">Your Name</h3>
             <p className="text-body-small text-gray-400 mb-4">
               Full-Stack Developer & UI/UX Designer passionate about creating 
               innovative digital solutions that make a difference.
@@ -42,7 +42,7 @@ export function PortfolioFooter() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:theariththeman@gmail.com"
+                href="mailto:your.email@example.com"
                 className="text-gray-400 hover:text-blue-400 transition-colors"
               >
                 <Mail size={20} />
@@ -94,19 +94,19 @@ export function PortfolioFooter() {
             <h4 className="text-heading-3 text-white mb-4">Get In Touch</h4>
             <div className="space-y-2">
               <a 
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=theariththeman@gmail.com"
+                href="mailto:your.email@example.com"
                 className="block text-gray-400 hover:text-blue-400 transition-colors"
               >
-                theariththeman@gmail.com
+                your.email@example.com
               </a>
               <a 
-                href="tel:+855011592229"
+                href="tel:+15551234567"
                 className="block text-gray-400 hover:text-blue-400 transition-colors"
               >
-                +855 011 59 2229
+                +1 (555) 123-4567
               </a>
               <span className="block text-gray-400">
-                Phnom Penh, Cambodia
+                Your City, Country
               </span>
             </div>
             
@@ -129,7 +129,7 @@ export function PortfolioFooter() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-body-small text-gray-400 mb-4 md:mb-0">
-              © {currentYear} Rith. All rights reserved.
+              © {currentYear} Your Name. All rights reserved.
             </p>
             <p className="text-body-small text-gray-400 flex items-center">
               Made with <Heart size={16} className="text-red-400 mx-1" /> and lots of coffee

@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
-export function PortfolioHeader() {
+interface PortfolioHeaderProps {
+  onNavigateToPayment?: () => void;
+}
+
+export function PortfolioHeader({ onNavigateToPayment }: PortfolioHeaderProps = {}) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -33,7 +37,7 @@ export function PortfolioHeader() {
               onClick={() => scrollToSection('home')}
               className="text-xl font-bold text-white hover:text-blue-400 transition-colors"
             >
-              RiT Web Dev
+              Portfolio
             </button>
           </div>
 
@@ -71,9 +75,15 @@ export function PortfolioHeader() {
                 link.download = 'Your_Name_Resume.pdf';
                 link.click();
               }}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+              className="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"
             >
               Resume
+            </button>
+            <button 
+              onClick={onNavigateToPayment}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors font-medium"
+            >
+              Hire Me
             </button>
           </div>
 
@@ -122,9 +132,18 @@ export function PortfolioHeader() {
                   link.click();
                   setIsMobileMenuOpen(false);
                 }}
-                className="block w-full text-left px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors mt-2"
+                className="block w-full text-left px-3 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors mt-2"
               >
                 Download Resume
+              </button>
+              <button 
+                onClick={() => {
+                  onNavigateToPayment?.();
+                  setIsMobileMenuOpen(false);
+                }}
+                className="block w-full text-left px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors mt-2 font-medium"
+              >
+                Hire Me
               </button>
             </div>
           </div>
