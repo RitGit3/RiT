@@ -1,13 +1,17 @@
+import { useForm, ValidationError } from '@formspree/react';
+
 import { Mail, MapPin, Github, Linkedin, Youtube, Instagram, MessageCircle } from "lucide-react";
 
 export function MinimalContact() {
   const socialLinks = [
     { name: 'GitHub', icon: Github, href: '#' },
     { name: 'LinkedIn', icon: Linkedin, href: '#' },
-    { name: 'YouTube', icon: Youtube, href: '#' },
+    { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com/@Space00123' },
     { name: 'Instagram', icon: Instagram, href: '#' },
     { name: 'Discord', icon: MessageCircle, href: '#' },
   ];
+  
+  const [state, handleSubmit] = useForm("xblazgww");
 
   return (
     <section id="contact" className="py-32 bg-gray-800/50">
@@ -29,7 +33,7 @@ export function MinimalContact() {
           <div className="space-y-6">
             <div className="flex items-center justify-center">
               <Mail size={20} className="text-purple-400 mr-4" />
-              <span className="text-body text-white">contact@rit-portfolio.com</span>
+              <span className="text-body text-white">theariththeman@gmail.com</span>
             </div>
             <div className="flex items-center justify-center">
               <MapPin size={20} className="text-purple-400 mr-4" />
@@ -38,15 +42,51 @@ export function MinimalContact() {
           </div>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <button className="btn-primary">
-            Start Your Project
-          </button>
-          <button className="btn-secondary">
-            Schedule a Call
-          </button>
-        </div>
+      <form onSubmit={handleSubmit} className="max-w-lg mx-auto mb-12 space-y-4">
+  {state.succeeded && (
+    <p className="text-green-400">Thanks for reaching out!</p>
+  )}
+  <div>
+    <label htmlFor="email" className="block text-white mb-2">
+      Email Address
+    </label>
+    <input
+      id="email"
+      type="email"
+      name="email"
+      className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none"
+    />
+    <ValidationError 
+      prefix="Email" 
+      field="email"
+      errors={state.errors}
+    />
+  </div>
+  <div>
+    <label htmlFor="message" className="block text-white mb-2">
+      Message
+    </label>
+    <textarea
+      id="message"
+      name="message"
+      rows={5}
+      className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none"
+    />
+    <ValidationError 
+      prefix="Message" 
+      field="message"
+      errors={state.errors}
+    />
+  </div>
+  <button 
+    type="submit" 
+    disabled={state.submitting}
+    className="btn-primary w-full"
+  >
+    Submit
+  </button>
+</form>
+
 
         {/* Social Links */}
         <div>
