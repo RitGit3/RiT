@@ -1,38 +1,9 @@
-import { useState } from "react";
+import { useForm, ValidationError } from '@formspree/react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
 
 export function PortfolioContact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission - replace with actual submission logic
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      
-      // Reset status after 3 seconds
-      setTimeout(() => setSubmitStatus('idle'), 3000);
-    }, 1000);
-  };
+  // Formspree hook (replaces your old handleSubmit)
+  const [state, handleSubmit] = useForm("xblazgww");
 
   const contactInfo = [
     {
@@ -129,7 +100,7 @@ export function PortfolioContact() {
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
               
-              {/* Name and Email Row */}
+              {/* Name and Email */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-body-small text-gray-400 mb-2">
@@ -139,8 +110,6 @@ export function PortfolioContact() {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
                     required
                     className="w-full bg-gray-800/30 border border-gray-700/50 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-blue-500/50 focus:outline-none transition-colors"
                     placeholder="Your name"
@@ -154,12 +123,11 @@ export function PortfolioContact() {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
                     required
                     className="w-full bg-gray-800/30 border border-gray-700/50 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-blue-500/50 focus:outline-none transition-colors"
                     placeholder="your.email@example.com"
                   />
+                  <ValidationError prefix="Email" field="email" errors={state.errors} />
                 </div>
               </div>
 
@@ -172,8 +140,6 @@ export function PortfolioContact() {
                   type="text"
                   id="subject"
                   name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
                   required
                   className="w-full bg-gray-800/30 border border-gray-700/50 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-blue-500/50 focus:outline-none transition-colors"
                   placeholder="Project discussion, job opportunity, etc."
@@ -188,22 +154,21 @@ export function PortfolioContact() {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
                   rows={6}
+                  required
                   className="w-full bg-gray-800/30 border border-gray-700/50 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-blue-500/50 focus:outline-none transition-colors resize-none"
                   placeholder="Tell me about your project or what you'd like to discuss..."
                 />
+                <ValidationError prefix="Message" field="message" errors={state.errors} />
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={state.submitting}
                 className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white px-6 py-4 rounded-lg transition-all duration-200 font-medium flex items-center justify-center"
               >
-                {isSubmitting ? (
+                {state.submitting ? (
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
                 ) : (
                   <>
@@ -213,16 +178,10 @@ export function PortfolioContact() {
                 )}
               </button>
 
-              {/* Status Messages */}
-              {submitStatus === 'success' && (
+              {/* Success Message */}
+              {state.succeeded && (
                 <div className="bg-green-600/10 border border-green-500/30 text-green-400 px-4 py-3 rounded-lg">
                   Thank you! Your message has been sent successfully.
-                </div>
-              )}
-              
-              {submitStatus === 'error' && (
-                <div className="bg-red-600/10 border border-red-500/30 text-red-400 px-4 py-3 rounded-lg">
-                  Sorry, there was an error sending your message. Please try again.
                 </div>
               )}
             </form>
