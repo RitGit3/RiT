@@ -2,28 +2,12 @@ import { useForm, ValidationError } from '@formspree/react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
 
 export function PortfolioContact() {
-  // Formspree hook
   const [state, handleSubmit] = useForm("xblazgww");
 
   const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "theariththeman@gmail.com",
-      href: "mailto:theariththeman@gmail.com"
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+855 (011) 59-2229",
-      href: "tel:+855011592229"
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "Phnom Penh, Cambodia",
-      href: null
-    }
+    { icon: Mail, label: "Email", value: "theariththeman@gmail.com", href: "mailto:theariththeman@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+855 (011) 59-2229", href: "tel:+855011592229" },
+    { icon: MapPin, label: "Location", value: "Phnom Penh, Cambodia", href: null }
   ];
 
   return (
@@ -34,17 +18,15 @@ export function PortfolioContact() {
         <div className="text-center mb-16">
           <h2 className="text-heading-1 text-white mb-6">Let's Work Together</h2>
           <p className="text-body-large text-gray-400 max-w-2xl mx-auto">
-            I'm always open to discussing new opportunities, interesting projects, 
-            or just having a chat about technology.
+            I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16">
 
-          {/* Contact Information */}
+          {/* Contact Info */}
           <div>
             <h3 className="text-heading-2 text-white mb-8">Get In Touch</h3>
-
             <div className="space-y-6 mb-8">
               {contactInfo.map((info, index) => {
                 const IconComponent = info.icon;
@@ -61,13 +43,9 @@ export function PortfolioContact() {
                 );
 
                 return info.href ? (
-                  <a key={index} href={info.href} className="block">
-                    {content}
-                  </a>
+                  <a key={index} href={info.href} className="block">{content}</a>
                 ) : (
-                  <div key={index}>
-                    {content}
-                  </div>
+                  <div key={index}>{content}</div>
                 );
               })}
             </div>
@@ -76,20 +54,10 @@ export function PortfolioContact() {
             <div>
               <h4 className="text-heading-3 text-white mb-4">Connect With Me</h4>
               <div className="flex space-x-4">
-                <a
-                  href="https://github.com/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gray-800/30 hover:bg-gray-700/50 border border-gray-700/50 hover:border-blue-500/30 rounded-lg p-3 transition-all duration-300"
-                >
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="bg-gray-800/30 hover:bg-gray-700/50 border border-gray-700/50 hover:border-blue-500/30 rounded-lg p-3 transition-all duration-300">
                   <Github size={20} className="text-gray-400 hover:text-blue-400" />
                 </a>
-                <a
-                  href="https://linkedin.com/in/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gray-800/30 hover:bg-gray-700/50 border border-gray-700/50 hover:border-blue-500/30 rounded-lg p-3 transition-all duration-300"
-                >
+                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="bg-gray-800/30 hover:bg-gray-700/50 border border-gray-700/50 hover:border-blue-500/30 rounded-lg p-3 transition-all duration-300">
                   <Linkedin size={20} className="text-gray-400 hover:text-blue-400" />
                 </a>
               </div>
@@ -103,9 +71,7 @@ export function PortfolioContact() {
               {/* Name and Email */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-body-small text-gray-400 mb-2">
-                    Name *
-                  </label>
+                  <label htmlFor="name" className="block text-body-small text-gray-400 mb-2">Name *</label>
                   <input
                     type="text"
                     id="name"
@@ -116,9 +82,7 @@ export function PortfolioContact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-body-small text-gray-400 mb-2">
-                    Email *
-                  </label>
+                  <label htmlFor="email" className="block text-body-small text-gray-400 mb-2">Email *</label>
                   <input
                     type="email"
                     id="email"
@@ -133,9 +97,7 @@ export function PortfolioContact() {
 
               {/* Subject */}
               <div>
-                <label htmlFor="subject" className="block text-body-small text-gray-400 mb-2">
-                  Subject *
-                </label>
+                <label htmlFor="subject" className="block text-body-small text-gray-400 mb-2">Subject *</label>
                 <input
                   type="text"
                   id="subject"
@@ -148,9 +110,7 @@ export function PortfolioContact() {
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-body-small text-gray-400 mb-2">
-                  Message *
-                </label>
+                <label htmlFor="message" className="block text-body-small text-gray-400 mb-2">Message *</label>
                 <textarea
                   id="message"
                   name="message"
