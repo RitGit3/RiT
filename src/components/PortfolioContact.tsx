@@ -100,6 +100,10 @@ export function PortfolioContact() {
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
               
+              <form 
+              action="https://formspree.io/f/xblazgww"
+              method="POST"
+              >
               {/* Name and Email */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -177,6 +181,7 @@ export function PortfolioContact() {
                   </>
                 )}
               </button>
+              </form>
 
               {/* Success Message */}
               {state.succeeded && (
